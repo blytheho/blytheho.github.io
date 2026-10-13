@@ -4,7 +4,7 @@ url: "https://blytheho.github.io"                       # your GitHub Pages URL
 
 # THEME-SPECIFIC CONFIGURATION
 title: Qijie (Jacquie) He                                        # ← your name or site title
-description: "PhD student in XXX at XXX University"    # ← shown in search engines & browser tab
+description: "Qijie (Jacquie) He"                      # ← shown in search engines & browser tab
 avatar: assets/img/selfieicon.png                         # ← 换成你的照片后改为 assets/img/profile.jpg
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
@@ -28,6 +28,12 @@ mermaid: default                                        # Enable mermaid-js for 
 google_analytics:                                       # Measurement ID, e.g. "G-00000"
 cookie_consent: false                                   # To respect the usage of cookies
 color_theme: auto                                       # auto, dark or light
+
+# Card-only Research entries (no detail page): listed on /research/ next to
+# _posts, but output: false means Jekyll generates no route for them.
+collections:
+  research_cards:
+    output: false
 
 # PAGINATION
 paginate: 5

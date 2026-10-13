@@ -2,3 +2,12 @@
 ---
 
 @import "type-on-strap";
+
+/* Page title (h1) block: same size and spacing on every page.
+   Content starts closer to the title than the theme default; the Research
+   list gets a little more air because its first element is a rule + card. */
+article > header#main .title-padder { padding-top: 0; padding-bottom: 0; }
+article > header#main h1.title { font-size: 1.9em; padding: 0.15em 0 0; }
+article { padding-top: 0.5rem; }
+article > header#main { margin-bottom: 0.9rem; }
+article:has(.rlist-wrap) > header#main { margin-bottom: 1.6rem; }

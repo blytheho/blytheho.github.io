@@ -64,17 +64,17 @@ position: 6
 
 <figure style="margin: 0 0 0.1rem; break-inside: avoid;">
   <img src="{{ '/assets/img/gallery/IMG_8479.JPEG' | relative_url }}" alt="" style="width: 100%; border-radius: 2px;" loading="lazy" />
-  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">A cute little squirrel</figcaption>
+  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">A squirrel</figcaption>
 </figure>
 
 <figure style="margin: 0 0 0.1rem; break-inside: avoid;">
   <img src="{{ '/assets/img/gallery/144a83605615b4ad7b6cc502e53f6e4b.JPEG' | relative_url }}" alt="" style="width: 100%; border-radius: 2px;" loading="lazy" />
-  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;"></figcaption>
+  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">Discussing my poster at TRB</figcaption>
 </figure>
 
 <figure style="margin: 0 0 0.1rem; break-inside: avoid;">
   <img src="{{ '/assets/img/gallery/71062519e15093ca483a2297d5b87b52.JPEG' | relative_url }}" alt="" style="width: 100%; border-radius: 2px;" loading="lazy" />
-  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">Celebrating my bday with friends</figcaption>
+  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">Celebrating bday with friends</figcaption>
 </figure>
 
 <figure style="margin: 0 0 0.1rem; break-inside: avoid;">
@@ -90,6 +90,26 @@ position: 6
 <figure style="margin: 0 0 0.1rem; break-inside: avoid;">
   <img src="{{ '/assets/img/gallery/IMG_8959.JPEG' | relative_url }}" alt="" style="width: 100%; border-radius: 2px;" loading="lazy" />
   <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">Guangzhou's Spring Festival flower markets</figcaption>
+</figure>
+
+<figure style="margin: 0 0 0.1rem; break-inside: avoid;">
+  <img src="{{ '/assets/img/gallery/5e7942461cb1adb8d32aa269e45009d3.jpg' | relative_url }}" alt="" style="width: 100%; border-radius: 2px;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">Graduation day with friends at SEU</figcaption>
+</figure>
+
+<figure style="margin: 0 0 0.1rem; break-inside: avoid;">
+  <img src="{{ '/assets/img/gallery/微信图片_20261012222933_419_2.jpg' | relative_url }}" alt="" style="width: 100%; border-radius: 2px;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">Harbin, Heilongjiang</figcaption>
+</figure>
+
+<figure style="margin: 0 0 0.1rem; break-inside: avoid;">
+  <img src="{{ '/assets/img/gallery/微信图片_20261012223011_420_2.jpg' | relative_url }}" alt="" style="width: 100%; border-radius: 2px;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">coffee time</figcaption>
+</figure>
+
+<figure style="margin: 0 0 0.1rem; break-inside: avoid;">
+  <img src="{{ '/assets/img/gallery/微信图片_20261012223415_421_2.jpg' | relative_url }}" alt="" style="width: 100%; border-radius: 2px;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.8em; color: #888; padding: 0.3rem 0;">Bday celebration in the lab</figcaption>
 </figure>
 
 </div>

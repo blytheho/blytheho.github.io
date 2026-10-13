@@ -1,6 +1,6 @@
 # Qijie (Jacquie) He - Personal Academic Website
 
-My personal academic website built with [Jekyll](https://jekyllrb.com/) and the [Type on Strap](https://github.com/sylhare/Type-on-Strap) theme.
+My personal academic website built with [Jekyll](https://jekyllrb.com/) and the [Type on Strap](https://github.com/sylhare/Type-on-Strap) theme (I customized a little for my own use)
 
 ## Structure
 

@@ -11,31 +11,50 @@ position: 5
 
 <div style="margin-bottom: 2.5rem; position: relative;">
   <div style="position: absolute; left: -2.65rem; top: 0.3rem; width: 12px; height: 12px; background: #555; border-radius: 50%;"></div>
+  <p style="margin: 0 0 0.3rem; font-weight: bold; color: #888; font-size: 0.9em;">July 2026</p>
+  <h3 style="margin: 0 0 0.5rem;">Graduated!</h3>
+  <p>Just completed my studies at both Monash University and Southeast University, defended my thesis and got my degrees. Grateful for the incredible people and experiences along the way.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0.5rem auto 0; max-width: 80%;">
+    <figure style="margin: 0; text-align: center;">
+      <img src="{{ '/assets/img/news/graduation-monash.jpg' | relative_url }}" alt="Graduation at Monash University"
+           style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;" />
+      <figcaption style="font-size: 0.85em; color: #888; margin-top: 0.3rem;">Graduation at Monash</figcaption>
+    </figure>
+    <figure style="margin: 0; text-align: center;">
+      <img src="{{ '/assets/img/news/graduation-seu.png' | relative_url }}" alt="Graduation at Southeast University"
+           style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;" />
+      <figcaption style="font-size: 0.85em; color: #888; margin-top: 0.3rem;">Graduation at SEU</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div style="margin-bottom: 2.5rem; position: relative;">
+  <div style="position: absolute; left: -2.65rem; top: 0.3rem; width: 12px; height: 12px; background: #555; border-radius: 50%;"></div>
   <p style="margin: 0 0 0.3rem; font-weight: bold; color: #888; font-size: 0.9em;">January 2026</p>
-  <h3 style="margin: 0 0 0.5rem;">TRB Annual Meeting 2026, Washington D.C.</h3>
-  <p>I presented my poster at the Transportation Research Board (TRB) 105th Annual Meeting in Washington, D.C.</p>
-  <figure style="margin: 0.5rem 0 0;">
+  <h3 style="margin: 0 0 0.5rem;">TRB2026, Washington D.C.</h3>
+  <p>Soooo happy to be in DC again for TRB! This year I brought a brand new topic to showcase.</p>
+  <figure style="margin: 0.5rem 0 0; text-align: center;">
     <img src="{{ '/assets/img/news/trb2026.JPEG' | relative_url }}" alt="TRB 2026"
-         style="max-width: 100%; border-radius: 2px;" />
-    <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.3rem;">TRB 105th Annual Meeting, Washington D.C.</figcaption>
+         style="max-width: 80%; border-radius: 2px; display: block; margin: 0 auto;" />
+    <figcaption style="font-size: 0.85em; color: #888; margin-top: 0.3rem;">Me and my poster, again!</figcaption>
   </figure>
 </div>
 
 <div style="margin-bottom: 2.5rem; position: relative;">
   <div style="position: absolute; left: -2.65rem; top: 0.3rem; width: 12px; height: 12px; background: #555; border-radius: 50%;"></div>
   <p style="margin: 0 0 0.3rem; font-weight: bold; color: #888; font-size: 0.9em;">January 2025</p>
-  <h3 style="margin: 0 0 0.5rem;">TRB Annual Meeting 2025, Washington D.C.</h3>
-  <p>I presented my poster at the Transportation Research Board (TRB) 104th Annual Meeting in Washington, D.C.</p>
-  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 0.5rem; margin-top: 0.5rem;">
-    <figure style="margin: 0;">
+  <h3 style="margin: 0 0 0.5rem;">TRB2025, Washington D.C.</h3>
+  <p>This is my first ever TRB meeting! So much fun discussing all of the interesting topics done by amazing researchers there.</p>
+  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 0.5rem; margin-top: 0.5rem; max-width: 100%;">
+    <figure style="margin: 0; text-align: center;">
       <img src="{{ '/assets/img/news/trb2025-1.jpg' | relative_url }}" alt="Southeast University TRB group photo"
            style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;" />
-      <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.3rem;">Southeast University TRB group photo</figcaption>
+      <figcaption style="font-size: 0.85em; color: #888; margin-top: 0.3rem;">SEU group photo</figcaption>
     </figure>
-    <figure style="margin: 0;">
+    <figure style="margin: 0; text-align: center;">
       <img src="{{ '/assets/img/news/trb2025-2.jpg' | relative_url }}" alt="Poster presentation"
            style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;" />
-      <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.3rem;">My poster presentation</figcaption>
+      <figcaption style="font-size: 0.85em; color: #888; margin-top: 0.3rem;">Me and my poster</figcaption>
     </figure>
   </div>
 </div>
