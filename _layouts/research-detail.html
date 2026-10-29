@@ -45,6 +45,13 @@ layout: default
 
   <hr class="rd-divider" />
 
+  {% if page.under_construction %}
+  <div style="text-align: center; padding: 3rem 1rem; color: #888;">
+    <p style="font-size: 2.2em; margin: 0 0 0.5rem;">🚧</p>
+    <p style="font-size: 1.15em; font-weight: 600; margin: 0 0 0.4rem;">This page is under construction.</p>
+    <p style="font-size: 0.95em; margin: 0;">More details are coming soon. Please check back later!</p>
+  </div>
+  {% else %}
   {% assign thumb = page.thumbnail | strip %}
   {% if thumb != "" %}
   <figure style="margin: 0 0 2rem; text-align: center;">
@@ -55,6 +62,7 @@ layout: default
   {% endif %}
 
   {{ content }}
+  {% endif %}
 
   {% if page.bibtex %}
   <h2>Citation</h2>

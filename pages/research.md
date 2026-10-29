@@ -144,7 +144,7 @@ position: 2
   .rlist-title { font-size: 1em; margin-bottom: 0.2rem; }
   .rlist-authors { margin-bottom: 0.2rem; font-size: 0.82em; }
   .rlist-excerpt { font-size: 0.84em; line-height: 1.4; }
-  .rlist-entry:not(.rlist-ext) .rlist-excerpt {
+  .rlist-entry:not(.rlist-ext):not(.rlist-full) .rlist-excerpt {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
@@ -159,14 +159,12 @@ position: 2
    the venue/badge row, which saves a line per card. */
 @media (min-width: 1100px) {
   .rlist-wrap { margin-left: -4rem; margin-right: -4rem; }
-  .rlist-body { position: relative; }
-  .rlist-body .rlist-linkrow {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    gap: 0.9rem;
-  }
+  /* Grid, not absolute positioning: a positioned .rlist-body would shrink the
+     clickable-card overlay to the text column and leave the thumbnail dead. */
+  .rlist-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 1rem; align-content: start; }
+  .rlist-body > * { grid-column: 1 / -1; }
+  .rlist-body > .rlist-meta-row { grid-column: 1; grid-row: 1; }
+  .rlist-body > .rlist-linkrow { grid-column: 2; grid-row: 1; margin: 0; gap: 0.9rem; align-self: center; }
 }
 
 /* ── Mobile (< 768px) ───────────────────────────────── */
@@ -188,9 +186,9 @@ position: 2
 {% for post in entries %}
 {% assign vparts = post.venue_display | split: " · " %}
 {% assign thumb = post.card_image | default: post.thumbnail | strip %}
-{% if post.has_detail %}{% assign card_href = post.url | relative_url %}{% else %}{% assign card_href = post.external_url | default: "" %}{% endif %}
+{% if post.has_detail %}{% assign card_href = post.url | relative_url %}{% elsif post.external_url %}{% assign card_href = post.external_url %}{% elsif post.links.poster %}{% assign card_href = post.links.poster | relative_url %}{% else %}{% assign card_href = "" %}{% endif %}
 
-<div class="rlist-entry{% if card_href != "" %} rlist-lead{% endif %}{% if post.external_url %} rlist-ext{% endif %}">
+<div class="rlist-entry{% if card_href != "" %} rlist-lead{% endif %}{% if post.external_url %} rlist-ext{% endif %}{% if post.full_excerpt %} rlist-full{% endif %}">
   <div class="rlist-img-col{% if thumb == "" and jekyll.environment != "development" %} rlist-img-empty{% endif %}">
     {% if thumb != "" %}<img src="{{ thumb | relative_url }}" alt="{{ post.card_alt }}" class="rlist-imgbox" loading="lazy" />{% elsif jekyll.environment == "development" %}<div class="rlist-imgplaceholder">Image<br>placeholder</div>{% endif %}
   </div>
@@ -199,9 +197,9 @@ position: 2
       {% if post.venue_display %}<span class="rlist-venue">{% if vparts.size == 2 and vparts[1].size < 12 %}{{ vparts[0] }}&nbsp;<span style="white-space:nowrap">· {{ vparts[1] }}</span>{% else %}{{ post.venue_display }}{% endif %}</span>{% endif %}
       {% if post.pub_type %}<span class="rlist-badge">{{ post.pub_type }}</span>{% endif %}
     </div>
-    <h3 class="rlist-title">{% if card_href != "" %}<a href="{{ card_href }}"{% if post.external_url %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</h3>
+    <h3 class="rlist-title">{% if card_href != "" %}<a href="{{ card_href }}"{% unless post.has_detail %} target="_blank" rel="noopener noreferrer"{% endunless %}>{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</h3>
     {% if post.authors %}<p class="rlist-authors">{{ post.authors }}{% if post.authors_note %} <span class="rlist-authnote">{{ post.authors_note }}</span>{% endif %}</p>{% endif %}
-    <p class="rlist-excerpt">{% if post.external_url %}{{ post.excerpt | strip_html }}{% else %}{{ post.excerpt | strip_html | truncate: 320 }}{% endif %}</p>
+    <p class="rlist-excerpt">{{ post.excerpt | strip_html }}</p>
     {% if post.contribution_note %}<p class="rlist-note">{{ post.contribution_note }}</p>{% endif %}
     {% if post.has_detail or post.links or post.external_url %}
     <div class="rlist-linkrow">

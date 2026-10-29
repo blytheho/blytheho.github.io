@@ -3,11 +3,20 @@
 
 @import "type-on-strap";
 
-/* Page title (h1) block: same size and spacing on every page.
-   Content starts closer to the title than the theme default; the Research
-   list gets a little more air because its first element is a rule + card. */
+/* Page title (h1) block: same size and spacing on every page that shows one
+   (Research, News, Gallery). A short rule under the title separates it from the
+   content. The About page hides its title (hide_title: true in index.md). */
 article > header#main .title-padder { padding-top: 0; padding-bottom: 0; }
 article > header#main h1.title { font-size: 1.9em; padding: 0.15em 0 0; }
+article > header#main h1.title::after {
+  content: "";
+  display: block;
+  width: 2.75rem;
+  height: 3px;
+  margin: 0.7rem auto 0;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: 0.25;
+}
 article { padding-top: 0.5rem; }
-article > header#main { margin-bottom: 0.9rem; }
-article:has(.rlist-wrap) > header#main { margin-bottom: 1.6rem; }
+article > header#main { margin-bottom: 2.25rem; }

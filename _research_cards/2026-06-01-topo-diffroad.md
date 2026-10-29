@@ -1,18 +1,20 @@
 ---
 layout: research-detail
-title: "Risk-Aware Generation of Static Highway Scenarios for Autonomous Vehicle Testing"
+title: "Topo-DiffRoad: Crash-Informed Generation of Safety-Critical Highway Road Scenes for Autonomous Vehicle Testing"
 tags: [Autonomous Driving, Scenario Generation, Diffusion Models, Simulation Testing, Road Safety]
 pub_type: "Master's Thesis"
 venue_display: "Southeast University · 2026"
-has_detail: true
+has_detail: true   # links to pages/topo-diffroad.md (currently "under construction"); body below is kept for later
+full_excerpt: true   # show the whole excerpt on the list page (no 3-line clamp) while the detail page is under construction
 authors: "<b>Qijie He</b> · Advisor: Prof. Ziyuan Pu"
 order: 1
 color: black
 thumbnail: ""
-card_image: "assets/img/research/project3-topo-diffroad/02_card_thumbnail_ramp.png"   # list-page thumbnail only
+card_image: "assets/img/research/topodiff-thesis.png"   # list-page thumbnail only
+card_alt: "Topo-DiffRoad framework: two-stage diffusion generating highway road layouts, rendered in 3D and tested in CARLA"
 contribution_note: "Sole author: data pipeline, Topo-DiffRoad model, 3D/OpenDRIVE generator, and CARLA evaluation."
 permalink: /research/topo-diffroad/
-excerpt: "Generating realistic highway roads with controllable curvature, grade and vertical curves, then showing in CARLA that they are harder for controllers to drive."
+excerpt: "Simulation-based testing of autonomous vehicles mostly varies the traffic and treats the road as a fixed background. On highways, however, sharp curves, steep grades and short vertical curves can turn small control errors into lane departures. In my Master’s thesis, I developed Topo-DiffRoad, a two-stage diffusion model that generates realistic highway roads, from mainlines to interchanges, with risk geometry set by thresholds learned from crash data. In CARLA closed-loop tests with an LQR controller, every generated scene triggered a lane departure, compared with 21% for the best baseline generator."
 # links:            # add real URLs when available
 #   paper: ""       # thesis PDF
 #   slides: ""
@@ -103,10 +105,5 @@ Sole author of the thesis. I designed and built the OSM data pipeline, the Topo-
 
 ## Limitations and next steps
 
-- **Region transfer:** risk thresholds were calibrated on U.S. crash and map data; applying the method to other road networks (e.g. China) needs local calibration.
 - **Beyond geometry:** the scenes contain the road only. Adding guardrails, signs, vegetation and occlusion would allow testing perception and localization, e.g. sight-distance-limited curves.
 - **Richer testing:** combining the risky road networks with dynamic traffic, and evaluating end-to-end driving stacks rather than only lateral controllers.
-
-## Related project
-
-The risk factors and thresholds used here come from my crash-frequency modelling work: [*Traffic Crash Data Augmentation with Multi-type Variables using Hybrid VAE-Diffusion Generative Neural Networks for Enhancing Crash Frequency Modeling*]({{ '/2025/01/01/project-1.html' | relative_url }}), Accident Analysis and Prevention, 2026 (co-first author). It used SHAP on the augmented crash model to identify curvature, grade and vertical-curve length as key risk factors for high-crash highway segments.

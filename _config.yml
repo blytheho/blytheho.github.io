@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/jacquie.github.io"                            # repo name as sub-path
+baseurl: ""                                              # user site (blytheho.github.io), no sub-path
 url: "https://blytheho.github.io"                       # your GitHub Pages URL
 
 # THEME-SPECIFIC CONFIGURATION
